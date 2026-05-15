@@ -2,17 +2,52 @@
 # Секреты и конфигурации
 .env
 my_session.session
+processed_ids.json
+*.key
+*.pem
+*.secret
 
 # Системные файлы
 .idea/
 .vscode/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.temp
+*.cache
 
 # Jupyter
 .ipynb_checkpoints/
+*.ipynb
 
-# Выходные данные (опционально)
+# Выходные данные
 output/
 posts/
+index.html
+
+# Файлы сессии Telegram (защита)
+*.session
+*.session-journal
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+.env/
+.venv/
+
+# Git
+*.orig
+*.rej
+
+# Backup файлы
+*.bak
+*.backup
+*~
 "@ | Out-File -FilePath .gitignore -Encoding utf8
