@@ -1,0 +1,18 @@
+@"
+# Секреты и конфигурации
+.env
+my_session.session
+
+# Системные файлы
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Выходные данные (опционально)
+output/
+posts/
+"@ | Out-File -FilePath .gitignore -Encoding utf8
