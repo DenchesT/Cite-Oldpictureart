@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Picture Art — Галерея</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <style>
+        :root { --pico-font-size: 100%; }
+        body { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+        .layout { display: grid; grid-template-columns: 1fr 200px; gap: 2rem; }
+        .sidebar { 
+            background: #f8f9fa; 
+            padding: 1rem; 
+            border-radius: 8px; 
+            height: fit-content;
+            position: sticky;
+            top: 1rem;
+        }
+        .sidebar h4 { margin-top: 0; }
+        .sidebar ul { list-style: none; padding: 0; font-size: 0.9rem; }
+        .sidebar li { margin-bottom: 0.3rem; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+        .card { 
+            padding: 1rem; 
+            border: 1px solid #e0e0e0; 
+            border-radius: 8px; 
+            transition: box-shadow 0.2s;
+        }
+        .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .card h3 { margin: 0 0 0.5rem 0; font-size: 1.1rem; }
+        .card h3 a { text-decoration: none; color: #2c3e50; }
+        .card time { color: #888; font-size: 0.85rem; }
+        .card-tags { margin-top: 0.5rem; }
+        .card-tags a { 
+            font-size: 0.8rem; 
+            color: #666; 
+            text-decoration: none; 
+            margin-right: 0.3rem;
+        }
+        .card-tags a:hover { color: #000; }
+        .search-box { 
+            width: 100%; 
+            padding: 0.5rem; 
+            margin-bottom: 1rem; 
+            border: 1px solid #ddd; 
+            border-radius: 4px; 
+        }
+        @media (max-width: 768px) {
+            .layout { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🖼 Old Picture Art</h1>
+        <input type="text" class="search-box" placeholder="🔍 Поиск по постам..." id="search">
+        <p style="color: #888;">Постов: 25</p>
+    </header>
+    <div class="layout">
+        <main>
+            <div class="card-grid" id="cards">
+                
+        <article class="card">
+            <h3><a href="2025-11-26-исаак-ильич-левитан.html">Исаак Ильич Левитан</a></h3>
+            <time>2025-11-26</time>
+            <div class="card-tags"><a href="tag-pc.html">#pc</a> <a href="tag-картина.html">#картина</a> <a href="tag-левитан.html">#левитан</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2025-12-01-станислас-анри-руар.html">Станислас Анри Руар</a></h3>
+            <time>2025-12-01</time>
+            <div class="card-tags"><a href="tag-dorsay.html">#dorsay</a> <a href="tag-rouart.html">#rouart</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2025-12-06-карл-павлович-брюллов.html">Карл Павлович Брюллов</a></h3>
+            <time>2025-12-06</time>
+            <div class="card-tags"><a href="tag-брюллов.html">#брюллов</a> <a href="tag-гтг.html">#гтг</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2025-12-10-ялмар-эйлиф-эммануэл-петерссен.html">Ялмар Эйлиф Эммануэл Петерссен</a></h3>
+            <time>2025-12-10</time>
+            <div class="card-tags"><a href="tag-peterssen.html">#peterssen</a> <a href="tag-skagens.html">#skagens</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2025-12-16-джон-сингер-сарджент.html">Джон Сингер Сарджент</a></h3>
+            <time>2025-12-16</time>
+            <div class="card-tags"><a href="tag-sargent.html">#sargent</a> <a href="tag-tate.html">#tate</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2025-12-24-жанфрансуа-милле.html">Жан-Франсуа Милле</a></h3>
+            <time>2025-12-24</time>
+            <div class="card-tags"><a href="tag-millet.html">#millet</a> <a href="tag-ohara_museum_of_art.html">#ohara_museum_of_art</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2025-12-31-вигго-юхансен.html">Вигго Юхансен</a></h3>
+            <time>2025-12-31</time>
+            <div class="card-tags"><a href="tag-hirschsprung.html">#hirschsprung</a> <a href="tag-johansen.html">#johansen</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-01-07-борис-михайлович-кустодиев.html">Борис Михайлович Кустодиев</a></h3>
+            <time>2026-01-07</time>
+            <div class="card-tags"><a href="tag-pc.html">#pc</a> <a href="tag-картина.html">#картина</a> <a href="tag-кустодиев.html">#кустодиев</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-01-16-эдуард-мане.html">Эдуард Мане</a></h3>
+            <time>2026-01-16</time>
+            <div class="card-tags"><a href="tag-egb.html">#egb</a> <a href="tag-manet.html">#manet</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-01-19-выставка-арктика-полюс-цвета.html">Выставка "Арктика. Полюс цвета"</a></h3>
+            <time>2026-01-19</time>
+            <div class="card-tags"><a href="tag-выставка.html">#выставка</a> <a href="tag-гтг.html">#гтг</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-02-04-жан-батист-эдуар-детай.html">Жан Батист Эдуар Детай</a></h3>
+            <time>2026-02-04</time>
+            <div class="card-tags"><a href="tag-detaille.html">#detaille</a> <a href="tag-versailles.html">#versailles</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-02-11-post.html">🎉</a></h3>
+            <time>2026-02-11</time>
+            
+        </article>
+        <article class="card">
+            <h3><a href="2026-02-11-альфред-сислей.html">Альфред Сислей</a></h3>
+            <time>2026-02-11</time>
+            <div class="card-tags"><a href="tag-clarkart.html">#clarkart</a> <a href="tag-sisley.html">#sisley</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-02-16-аурелиано-де-беруэте.html">Аурелиано де Беруэте</a></h3>
+            <time>2026-02-16</time>
+            <div class="card-tags"><a href="tag-deruete.html">#deruete</a> <a href="tag-prado.html">#prado</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-02-24-выставка-импрессионисты-в-сибири.html">Выставка "Импрессионисты в Сибири"</a></h3>
+            <time>2026-02-24</time>
+            <div class="card-tags"><a href="tag-выставка.html">#выставка</a> <a href="tag-нгхм.html">#нгхм</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-03-02-новосибирский-государственный-художественный-музей.html">Новосибирский государственный художественный музей</a></h3>
+            <time>2026-03-02</time>
+            <div class="card-tags"><a href="tag-галерея.html">#галерея</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-03-10-станислав-юлианович-жуковский.html">Станислав Юлианович Жуковский</a></h3>
+            <time>2026-03-10</time>
+            <div class="card-tags"><a href="tag-жуковский.html">#жуковский</a> <a href="tag-картина.html">#картина</a> <a href="tag-нхмрб.html">#нхмрб</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-03-13-oldpictureart.html">@oldpictureart</a></h3>
+            <time>2026-03-13</time>
+            <div class="card-tags"><a href="tag-разное.html">#разное</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-03-16-анонимные-художники-феликс-огюстен-милиус-александрогюст-роз.html">Анонимные художники, Феликс Огюстен Милиус, Александр-Огюст Розе, Альфред Адольф Ленгле, Огюст Русслен, Огюст Александр Хирш, Эмиль-Анри Лапорт, Огюст Ренуар, Поль Милье, Леонс-Люсьен Кордье, Альбер Дарье</a></h3>
+            <time>2026-03-16</time>
+            <div class="card-tags"><a href="tag-infos.html">#infos</a> <a href="tag-petit_palais.html">#petit_palais</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-03-22-жанбатист-арман-гийомен.html">Жан-Батист Арман Гийомен</a></h3>
+            <time>2026-03-22</time>
+            <div class="card-tags"><a href="tag-guillaumin.html">#guillaumin</a> <a href="tag-muma.html">#muma</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-03-26-альфред-сислей.html">Альфред Сислей</a></h3>
+            <time>2026-03-26</time>
+            <div class="card-tags"><a href="tag-nga.html">#nga</a> <a href="tag-sisley.html">#sisley</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-04-04-жакоб-абраам-камиль-писсарро.html">Жакоб Абраам Камиль Писсарро</a></h3>
+            <time>2026-04-04</time>
+            <div class="card-tags"><a href="tag-pam.html">#pam</a> <a href="tag-pissarro.html">#pissarro</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-04-16-винсент-виллем-ван-гог.html">Винсент Виллем ван Гог</a></h3>
+            <time>2026-04-16</time>
+            <div class="card-tags"><a href="tag-gogh.html">#gogh</a> <a href="tag-nga.html">#nga</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-04-30-аксели-галленкаллела.html">Аксели Галлен-Каллела</a></h3>
+            <time>2026-04-30</time>
+            <div class="card-tags"><a href="tag-gallen_kallela.html">#gallen_kallela</a> <a href="tag-гмии.html">#гмии</a> <a href="tag-картина.html">#картина</a></div>
+        </article>
+        <article class="card">
+            <h3><a href="2026-05-15-николай-егорович-сверчков.html">Николай Егорович Сверчков</a></h3>
+            <time>2026-05-15</time>
+            <div class="card-tags"><a href="tag-msk.html">#msk</a> <a href="tag-картина.html">#картина</a> <a href="tag-сверчков.html">#сверчков</a></div>
+        </article>
+            </div>
+        </main>
+        <aside class="sidebar">
+            <h4>📅 По годам</h4>
+            <ul><li><a href="year-2026.html">2026</a></li>
+<li><a href="year-2025.html">2025</a></li></ul>
+            <h4>📆 По месяцам</h4>
+            <ul><li><a href="month-2026-05.html">2026-05</a></li>
+<li><a href="month-2026-04.html">2026-04</a></li>
+<li><a href="month-2026-03.html">2026-03</a></li>
+<li><a href="month-2026-02.html">2026-02</a></li>
+<li><a href="month-2026-01.html">2026-01</a></li>
+<li><a href="month-2025-12.html">2025-12</a></li>
+<li><a href="month-2025-11.html">2025-11</a></li></ul>
+        </aside>
+    </div>
+    <script>
+        document.getElementById('search').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.card').forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(query) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
